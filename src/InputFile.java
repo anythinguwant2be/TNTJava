@@ -15,7 +15,7 @@ public class InputFile {
                     while((data = br.readLine())!=null){
                         if(data.contains("Job Id        :")){
                             String job = data.substring(16);
-                            System.out.println(data);
+                            //System.out.println(data);
                             jobList.add(job);
                         }
                         else{
