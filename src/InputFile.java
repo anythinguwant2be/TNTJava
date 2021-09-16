@@ -13,6 +13,10 @@ public class InputFile {
                     String source = files.getAbsolutePath();
                     BufferedReader br = new BufferedReader(new FileReader(source));
                     while((data = br.readLine())!=null){
+                        if(data.contains("From:\t")){
+                            System.out.println(data);
+                            jobList.add(data);
+                        }
                         if(data.contains("Job Id        :")){
                             String job = data.substring(16);
                             //System.out.println(data);
