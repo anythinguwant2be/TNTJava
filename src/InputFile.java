@@ -19,6 +19,14 @@ public class InputFile {
                             jobList.add(job);
                         }
                         else{
+                            try{
+                                int jobID = Integer.parseInt(data);
+                                jobList.add(String.valueOf(jobID));
+                            }
+                            catch(Exception e){
+                                //System.out.println("Error");
+                                //e.printStackTrace();
+                            }
                             //System.out.println(files.getAbsolutePath());
                             //System.out.println("No Job ID");
                         }
